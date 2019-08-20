@@ -1,0 +1,100 @@
+\:root
+	--radius: 2px
+	--blue: #1E88E5
+	--white: #FFFFFF
+	--offwhite: #F8F8FA
+	--transition-duration: 300ms
+	--font-list: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+	font-size: 16px
+	--border-color: hsl(141, 15%, 91%)
+	--border-radius: .25em
+	--background-color: hsl(141, 12%, 98.5%)
+	--bright-green: hsla(141, 75%, 70%, 1)
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	&:after, &:before
+		box-sizing: border-box
+
+
+body
+	color: #333
+	position: relative
+	font-family: var(--font-list)
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+	padding-bottom: 7rem
+	background: var(--background-color)
+
+a
+	color: rgb(0, 100, 200)
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+	&:visited
+		color: rgb(0, 80, 160)
+
+h2
+	font-weight: 900
+
+button, textarea, input, select, .radio > label
+	font-family: inherit
+	background: white
+	border: 1px solid var(--border-color)
+	padding: .35em 1em
+	font-size: 1em
+	border-radius: var(--border-radius)
+
+button
+	cursor: pointer
+	display: inline-block
+	text-align: center
+
+form
+	> h2
+		margin: 0 0 1rem
+	> button
+		background: var(--bright-green)
+		font-weight: 600
+		display: block
+		margin: 1rem 0 0
+
+input, textarea
+	display: block
+	width: 100%
+
+fieldset
+	border: none
+	padding: 0
+	margin: 0 0 1.25rem
+
+label, legend
+	display: block
+	margin-bottom: .5em
+	font-size: 1.125em
+
+select
+	width: 100%
+
+.radio
+	display: inline-block
+	margin: 0 .5rem .5rem 0
+	> label
+		font-size: 1em
+	> input
+		position: fixed
+		top: -100vh
+		left: -100vw
+		width: 0
+		height: 0
+		&:checked ~ label
+			background: hsl(141, 70%, 75%)
+
+::-webkit-scrollbar
+	width: .5rem
+
+::-webkit-scrollbar-thumb
+	border-radius: .25em
+	background: hsl(141, 50%, 90%)
